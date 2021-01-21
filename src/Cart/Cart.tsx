@@ -10,7 +10,7 @@ type Props = {
 
 const Cart: React.FC<Props> = ({ cartItems, addToCart, removeFromCart }) => {
   const calculateTotal = (items: CartItemType[]) =>
-    items.reduce((ack: number, item) => ack + item.amount * item.price, 0);
+    items.reduce((accumulate: number, item) => accumulate + item.amount * item.price, 0);
 
   return (
     <Wrapper>
